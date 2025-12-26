@@ -1,0 +1,14 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 45.046s
+
+OK
+
+--- STARTING CART TEST ---
+STEP 1: Checking for Home Screen...
+   -> Success: Home Screen found.
+STEP 2: Selecting a Product...
+   -> Success: Clicked product image.
+STEP 3: Clicking 'Add to Cart'...
+STEP 4: Navigating to Cart Screen...
+   -> Success: Clicked Cart Icon.

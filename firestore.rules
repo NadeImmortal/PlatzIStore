@@ -1,0 +1,25 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // 1. User Profiles
+    // Only the user themselves can read/write their own profile
+    match /users/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // 2. Shopping Carts
+    // Path: carts/{userId}/items/{productId}
+    // Users can only access their own cart sub-collection
+    match /carts/{userId}/items/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // 3. Favorites
+    // Path: favorites/{userId}/items/{productId}
+    // Users can only access their own favorites sub-collection
+    match /favorites/{userId}/items/{document=**} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+  }
+}

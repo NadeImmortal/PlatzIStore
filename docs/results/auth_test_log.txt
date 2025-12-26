@@ -1,0 +1,21 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 17.457s
+
+OK
+STEP 1: Navigate to Signup
+   -> Clicked 'Create Account'
+STEP 2: Type Username
+   -> Username Typed!
+STEP 3: Switch Focus to Email
+   -> Pressed TAB key
+STEP 4: Type Email
+   -> Email Typed!
+STEP 5: Switch Focus to Password
+   -> Pressed TAB key
+STEP 6: Type Password
+   -> Password Typed!
+STEP 7: Click Sign Up
+   -> Clicked Sign Up
+STEP 8: Verify Home
+   -> Home Screen Reached!
